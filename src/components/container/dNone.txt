@@ -1,0 +1,4 @@
+
+                calendarWrapper.current.style.display = "none";
+                dropDownWrapperRef.current.style.display = "none";                
+                rgComponent.current.style.display = "none";

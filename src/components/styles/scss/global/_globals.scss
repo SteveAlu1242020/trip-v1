@@ -1,0 +1,38 @@
+@import "./mixins";
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.global-wrapper {
+  width: 89%;
+  padding: 0.75rem 0rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  @include breakpoint-up(large) {
+    // width: 1160px;
+    width: 1176px;
+  }
+}
+
+.d-flex {
+  display: flex;
+  &-sa {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+  }
+  &-sb {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+  &-c {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+}

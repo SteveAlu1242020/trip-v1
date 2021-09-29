@@ -1,0 +1,129 @@
+@import "./mixins";
+@import "./variables";
+
+// *************************** TOP BAR ***************************
+.top-bar {
+  padding-bottom: 0rem;
+  &-wrapper {
+  }
+
+  &-left {
+    .logo {
+      img {
+        width: 124px;
+      }
+    }
+    .search-box-wrapper {
+      position: relative;
+      .search-input {
+        width: 290px;
+        padding: 8px;
+        margin-left: 20px;
+        border: 1px solid $lightGrey;
+        outline: none;
+
+        &::placeholder {
+          color: rgba(128, 128, 128, 0.479);
+        }
+      }
+    }
+
+    .search-button {
+      position: absolute;
+      width: 47px;
+      right: 0;
+      cursor: pointer;
+      background: #287dfa;
+      height: 34px;
+      border-radius: 0 2px 2px 0;
+      line-height: 43px;
+      border: none;
+      // overflow: hidden;
+      // text-align: center;
+      .fa-search {
+        color: $white;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &-right {
+    &-blocks {
+      display: flex;
+      align-items: center;
+      padding: 0rem 0.25rem;
+      box-sizing: border-box;
+      font-size: 0.85rem;
+      &:hover {
+        cursor: pointer;
+        color: $primary;
+      }
+
+      .fa-icons {
+        margin: 0rem 0.15rem;
+      }
+    }
+  }
+}
+
+// *************************** MAIN MENU ***************************
+.main-menu {
+  color: $textDark;
+  nav {
+    ul {
+      display: flex;
+      li {
+        list-style: none;
+        margin-right: 1.5rem;
+        font-size: 1.05rem;
+        .menu-links {
+          text-decoration: none;
+          color: $textDark;
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+// *************************** BANNER ***************************
+.banner {
+  background-color: $lightOrange;
+  &-wrapper {
+    height: 38px;
+    color: $textDark;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    h5 {
+      font-weight: 600;
+    }
+
+    ul {
+      display: flex;
+      align-self: center;
+      margin-left: 2rem;
+      li {
+        list-style: none;
+        align-items: center;
+        display: flex;
+        font-size: 0.75rem;
+
+        .banner-links {
+          color: $textDark;
+          &:hover {
+            color: $primary;
+          }
+        }
+
+        img {
+          margin: 0rem 0.5rem;
+          width: 18px;
+        }
+      }
+    }
+  }
+}

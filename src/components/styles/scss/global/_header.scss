@@ -1,0 +1,564 @@
+@import "./mixins";
+@import "./variables";
+
+.header {
+  margin: 0 auto;
+  background: url("../../../../assets/Header-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280px;
+  position: relative;
+  z-index: 1;
+  // border: 3px dotted cyan;
+  margin-bottom: 12rem;
+
+  // *************************** ARC ***************************
+  .arc-wrapper {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    background: url("../../../../assets/arc.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    padding-top: 6.4516%;
+    width: 100%;
+
+    // background-position: 50% 0;
+    // background-size: 101% 100%;
+  }
+
+  .header-wrapper {
+    // border: 3px dotted orange;
+    padding-top: 8.5rem;
+    .service-wrapper {
+      // border: 3px dotted red;
+      box-shadow: 0px 4px 7px $lightGrey;
+      padding: 1.5rem;
+      box-sizing: border-box;
+      // border-radius: 0 1rem;
+      background: $white;
+      // height: 10.5rem;
+      height: 10.1rem;
+      .service-menu {
+        .service-menu-wrapper {
+          nav {
+            ul {
+              display: flex;
+              position: relative;
+              bottom: 3.8rem;
+              li {
+                list-style: none;
+                background: transparent;
+                color: $white;
+                // margin-left: 0 1.5rem 0 -1.5rem;
+                margin: 0 1.5rem 0 -1.5rem;
+                // border: 1px solid black;
+
+                .service-links {
+                  padding: 0.5rem 1.5rem;
+                  display: flex;
+                  align-items: center;
+                  text-decoration: none;
+                  // color: $textDark;
+                  color: $white;
+                  background: transparent;
+                  font-size: 1rem;
+                  font-weight: 700;
+                  // &:active {
+                  //   padding: 5rem;
+                  // }
+                  .link-icons {
+                    margin-right: 0.25rem;
+                  }
+                }
+              }
+              // ********************* HOTEL SEARCH *********************
+              .hotel-search {
+                position: absolute;
+                // top: 5rem;
+                top: 3.7rem;
+                // padding: 1.5rem;
+
+                > * input {
+                  border: none;
+                  padding-top: 0.75rem;
+                  box-sizing: border-box;
+
+                  font-weight: 700;
+                  letter-spacing: 0.5px;
+                  font-size: 1rem;
+
+                  &:focus {
+                    outline: none;
+                    // background: orange;
+                  }
+                  &::placeholder {
+                    color: grey;
+                    font-size: 0.85rem;
+                    // background: red;
+                    font-weight: 700;
+                  }
+                }
+                .input-wrapper {
+                  display: flex;
+                  justify-content: space-evenly;
+                  align-items: center;
+
+                  .input-block {
+                    padding: 0.75rem;
+                    box-sizing: border-box;
+                    border: 1.5px solid $lightGrey;
+                    border-right: 0.75px solid $lightGrey;
+                    position: relative;
+
+                    label {
+                      color: $textLight;
+                      font-size: 0.9rem;
+                      letter-spacing: -0.5px;
+                    }
+
+                    .input-block-date {
+                      padding: 0.75rem;
+                      box-sizing: border-box;
+                    }
+
+                    .rg-inner {
+                      position: relative;
+                      &-input {
+                      }
+                      &-arrow {
+                        cursor: pointer;
+                      }
+                    }
+                    .rg-component {
+                      // background: red;
+                      position: absolute;
+                      left: -2.5px;
+                      top: 4.85rem;
+                      display: none;
+
+                      .rg-component-inner {
+                        background: $white;
+                        border: 2px solid $lightGrey;
+                        border-top: none;
+                        width: 18rem;
+                        padding: 0.25rem 1rem 1rem 1rem;
+                        box-sizing: border-box;
+
+                        .option-wrapper {
+                          .counter-wrapper {
+                            // background: red;
+                            .rooms {
+                              p {
+                              }
+                              .user-select {
+                                width: 4.75rem;
+                                padding: 0.5rem 0rem;
+                                box-sizing: border-box;
+                                font-size: 1.4rem;
+                                // color: $textLight;
+                                .minus-circle {
+                                  cursor: pointer;
+                                }
+                                .count {
+                                }
+                                .plus-circle {
+                                  cursor: pointer;
+                                }
+                              }
+                            }
+                            .adults {
+                              p {
+                              }
+                              .user-select {
+                                width: 4.75rem;
+                                padding: 0.5rem 0rem;
+                                box-sizing: border-box;
+                                font-size: 1.4rem;
+                                // color: $textLight;
+                                .minus-circle {
+                                  cursor: pointer;
+                                }
+                                .count {
+                                }
+                                .plus-circle {
+                                  cursor: pointer;
+                                }
+                              }
+                            }
+                            .children {
+                              p {
+                              }
+                              .user-select {
+                                width: 4.75rem;
+                                padding: 0.5rem 0rem;
+                                box-sizing: border-box;
+                                font-size: 1.4rem;
+                                // color: $textLight;
+                                .minus-circle {
+                                  cursor: pointer;
+                                }
+                                .count {
+                                }
+                                .plus-circle {
+                                  cursor: pointer;
+                                }
+                              }
+                            }
+
+                            .children-description {
+                              display: none;
+                              .childAgeSelect {
+                              }
+                            }
+                          }
+
+                          .counter-button {
+                            font-size: 1.5rem;
+                            border: none;
+                            background: transparent;
+                            display: flex;
+                            cursor: pointer;
+                          }
+                        }
+
+                        .submit-wrapper {
+                          // background: orange;
+                          padding: 1rem;
+                          box-sizing: border-box;
+                          text-align: right;
+                          .rgSubmitHandler {
+                            background: none;
+                            border: none;
+                            font-size: 1rem;
+                            font-weight: 100;
+                            color: $primary;
+                            cursor: pointer;
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                  .button-block {
+                    .search-btn-large {
+                      background: $primary;
+                      padding: 1.1rem;
+                      box-sizing: border-box;
+                      // border: 3.7px solid $primary;
+                      border: 4px solid $primary;
+                      // border: 3px solid $primary;
+                      color: $white;
+                      cursor: pointer;
+
+                      &:hover {
+                        background: #1d6ddd;
+                        border: 4px solid #1d6ddd;
+                      }
+                    }
+                  }
+
+                  .dropdown-wrapper {
+                    background: $white;
+                    position: absolute;
+                    left: 0;
+                    top: 5rem;
+                    border: 1.5px solid $lightGrey;
+                    border-top: transparent;
+                    display: none;
+
+                    .title {
+                      padding: 0.5rem;
+                      box-sizing: border-box;
+                      background: $lightGrey;
+                      color: $textLight;
+                    }
+                    .recent-search-wrapper {
+                      background: $white;
+
+                      // padding: 0 0 2rem 0;
+                      box-sizing: border-box;
+                      ul {
+                        padding: 0.5rem;
+                        bottom: 0;
+                        display: grid;
+                        grid-template-columns: repeat(5, 1fr);
+                        li {
+                          margin: 0;
+                          color: $textDark;
+                          padding: 0.75rem;
+                          box-sizing: border-box;
+                          &:hover {
+                            cursor: pointer;
+                            background: $primaryLight;
+                            color: $white;
+                          }
+                        }
+                      }
+                    }
+                    .popular-wrapper {
+                      background: $white;
+
+                      // padding: 0 0 2rem 0;
+                      box-sizing: border-box;
+                      ul {
+                        padding: 0.5rem;
+                        bottom: 0;
+                        display: grid;
+                        grid-template-columns: repeat(5, 1fr);
+                        li {
+                          margin: 0;
+                          color: $textDark;
+                          padding: 0.75rem;
+                          box-sizing: border-box;
+                          &:hover {
+                            cursor: pointer;
+                            background: $primaryLight;
+                            color: $white;
+                          }
+                        }
+                      }
+                    }
+                    .us-and-na-wrapper {
+                      background: $white;
+
+                      // padding: 0 0 2rem 0;
+                      box-sizing: border-box;
+                      ul {
+                        padding: 0.5rem;
+                        bottom: 0;
+                        display: grid;
+                        grid-template-columns: repeat(5, 1fr);
+                        li {
+                          margin: 0;
+                          color: $textDark;
+                          padding: 0.75rem;
+                          box-sizing: border-box;
+                          &:hover {
+                            cursor: pointer;
+                            background: $primaryLight;
+                            color: $white;
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                  .calendar-wrapper {
+                    display: none;
+                    .calendar-inner {
+                      position: absolute;
+                      background: $white;
+                      padding: 0.9rem;
+                      top: 5rem;
+                      // left: 15.6rem;
+                      left: 15rem;
+                      width: 47.5rem;
+                      box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.26);
+                      border-radius: 3px;
+                      // display: none;
+
+                      &-top {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .calendar-check-in {
+                          left: 15.6rem;
+                        }
+                        .calendar-check-out {
+                          left: 40rem;
+                        }
+                      }
+
+                      &-bottom {
+                        margin-top: 1rem;
+                        padding: 1rem 1rem 0.5rem 1rem;
+                        box-sizing: border-box;
+                        text-align: center;
+                        border-top: 1px solid $lightGrey;
+                      }
+
+                      // React Calendar
+
+                      .react-calendar {
+                        border: none;
+                      }
+                    }
+                  }
+                }
+              }
+              // ********************* FLIGHT SEARCH *********************
+              .flight-search {
+                position: absolute;
+                // top: 5rem;
+                // top: 3.7rem;
+                top: 4.7rem;
+                // padding: 1.5rem;
+                .input-wrapper {
+                  .input-block {
+                    padding: 1.5rem;
+                    box-sizing: border-box;
+                    // border: 1.5px solid $lightGrey;
+                    border: 2px solid $lightGrey;
+                    border-right: 0.75px solid $lightGrey;
+                  }
+
+                  > * input {
+                    border: none;
+
+                    &:focus {
+                      outline: none;
+                    }
+                    &::placeholder {
+                      color: grey;
+                    }
+                  }
+                }
+              }
+              // ********************* TRAIN SEARCH *********************
+              .train-search {
+                position: absolute;
+                // top: 5rem;
+                // top: 3.7rem;
+                top: 4.7rem;
+                // padding: 1.5rem;
+                .input-wrapper {
+                  .input-block {
+                    padding: 1.5rem;
+                    box-sizing: border-box;
+                    // border: 1.5px solid $lightGrey;
+                    border: 2px solid $lightGrey;
+                    border-right: 0.75px solid $lightGrey;
+                  }
+
+                  > * input {
+                    border: none;
+
+                    &:focus {
+                      outline: none;
+                    }
+                    &::placeholder {
+                      color: grey;
+                    }
+                  }
+                }
+              }
+              // ********************* CAR SEARCH *********************
+              .car-search {
+                position: absolute;
+                // top: 5rem;
+                // top: 3.7rem;
+                top: 4.7rem;
+                // padding: 1.5rem;
+                .input-wrapper {
+                  .input-block {
+                    padding: 1.5rem;
+                    box-sizing: border-box;
+                    // border: 1.5px solid $lightGrey;
+                    border: 2px solid $lightGrey;
+                    border-right: 0.75px solid $lightGrey;
+                  }
+
+                  > * input {
+                    border: none;
+
+                    &:focus {
+                      outline: none;
+                    }
+                    &::placeholder {
+                      color: grey;
+                    }
+                  }
+                }
+              }
+              // ********************* TOUR SEARCH *********************
+              .tour-search {
+                position: absolute;
+                // top: 5rem;
+                // top: 3.7rem;
+                top: 4.7rem;
+                // padding: 1.5rem;
+                .input-wrapper {
+                  .input-block {
+                    padding: 1.5rem;
+                    box-sizing: border-box;
+                    // border: 1.5px solid $lightGrey;
+                    border: 2px solid $lightGrey;
+                    border-right: 0.75px solid $lightGrey;
+                  }
+
+                  > * input {
+                    border: none;
+
+                    &:focus {
+                      outline: none;
+                    }
+                    &::placeholder {
+                      color: grey;
+                    }
+                  }
+                }
+              }
+              // ********************* SEARCH FIELDS END *********************
+            }
+          }
+        }
+      }
+
+      // *************************** Additional Filter Wrapper Start ***************************
+
+      .additional-filter-wrapper {
+        // margin-top: 3.8rem;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        // padding: 0.1rem;
+        // box-sizing: border-box;
+
+        .checkbox-wrapper {
+          margin-right: 3.125rem;
+        }
+        .rating-wrapper {
+          .rating-box {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background: $lightGrey;
+            border-radius: 1px;
+            width: 53px;
+            height: 22px;
+            margin-right: 6px;
+            font-size: 14px;
+            color: $textDark;
+            cursor: pointer;
+            border: 1px solid transparent;
+            user-select: none;
+
+            &:hover {
+              color: $primary;
+            }
+
+            .rating-icon {
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+
+      // *************************** Additional Filter Wrapper End ***************************
+    }
+
+    // *************************** SERVICE ***************************
+
+    // *************************** CLIENT ***************************
+  }
+  .active {
+    background: #ffffff !important;
+    color: #0f294d !important;
+  }
+}
